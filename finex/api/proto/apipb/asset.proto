@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package apipb;
+
+import "entpb/entpb.proto";
+
+option go_package = "opendax-clean/finex/api/proto/apipb";
+
+message AssetGetRequest {
+  string id = 1;
+}
+
+message AssetListRequest {
+  repeated string ids = 1;
+}
+
+message AssetListResponse {
+  repeated entpb.Asset assets = 1;
+}
+
+service AssetService {
+  rpc Get(AssetGetRequest) returns (entpb.Asset);
+  rpc List(AssetListRequest) returns (AssetListResponse);
+}

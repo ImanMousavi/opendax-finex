@@ -1,0 +1,8 @@
+{
+    "protoc": {
+        "options": [
+            "-I=finex/api/proto",
+            "-I=finex/ent/proto"
+        ]
+    }
+}

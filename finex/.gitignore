@@ -1,0 +1,5 @@
+/api/proto/**/*.pb.go
+
+/ent/*
+!/ent/schema
+!/ent/generate.go
